@@ -2,19 +2,22 @@ from airflow.decorators import dag, task
 from datetime import datetime, timedelta
 import pandahouse as ph
 import pandas as pd
+import os
 
+# ВАЖНО: Данные для подключения к ClickHouse удалены в соответствии с условиями использования учебных материалов.
+# Для запуска необходимо настроить собственное подключение через переменные окружения или напрямую.
 SOURCE_CONN = {
-    'host': 'http://clickhouse.lab.karpov.courses:8123',
-    'password': 'dpo_python_2020',
-    'user': 'student',
-    'database': 'simulator_20260720'
+    'host': os.getenv('CLICKHOUSE_SOURCE_HOST', 'your_host'),
+    'password': os.getenv('CLICKHOUSE_SOURCE_PASSWORD', 'your_password'),
+    'user': os.getenv('CLICKHOUSE_SOURCE_USER', 'your_user'),
+    'database': os.getenv('CLICKHOUSE_SOURCE_DB', 'your_database')
 }
 
 TARGET_CONN = {
-    'host': 'http://clickhouse.lab.karpov.courses:8123',
-    'password': '656e2b0c9c',
-    'user': 'student-rw',
-    'database': 'test'
+    'host': os.getenv('CLICKHOUSE_TARGET_HOST', 'your_host'),
+    'password': os.getenv('CLICKHOUSE_TARGET_PASSWORD', 'your_password'),
+    'user': os.getenv('CLICKHOUSE_TARGET_USER', 'your_user'),
+    'database': os.getenv('CLICKHOUSE_TARGET_DB', 'your_database')
 }
 
 # Имя таблицы с префиксом через подчёркивание
