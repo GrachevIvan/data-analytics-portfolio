@@ -1,0 +1,23 @@
+# Core data processing
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Statistical analysis and visualization
+scipy>=1.7.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# ClickHouse client
+pandahouse>=0.1.0
+
+# Forecasting (Orbit)
+orbit-ml>=1.1.0
+
+# Orchestration (Airflow)
+apache-airflow>=2.0.0
+
+# Telegram bot (for alerts and reports)
+python-telegram-bot>=13.0
+
+# Jupyter (for running notebooks)
+jupyter>=1.0.0
