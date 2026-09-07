@@ -9,19 +9,19 @@ import seaborn as sns
 import io
 import telegram
 
-# ---------- Параметры Telegram-бота ----------
-TOKEN = '8818975193:AAGK8xef2hDSL2kVWoTnfDO7pDnU4smKSe4'
-CHAT_ID = -969316925  # рабочая группа
+# Telegram токен и ID чата удалены в соответствии с условиями использования учебных материалов.
+TOKEN = os.getenv('TELEGRAM_TOKEN', 'your_token')
+CHAT_ID = os.getenv('TELEGRAM_CHAT_ID', 'your_chat_id')
 
 # ---------- Часовой пояс Москвы ----------
 MSK = timezone(timedelta(hours=3))
 
 # ---------- Подключение к ClickHouse ----------
 SOURCE_CONN = {
-    'host': 'http://clickhouse.lab.karpov.courses:8123',
-    'password': 'dpo_python_2020',
-    'user': 'student',
-    'database': 'simulator_20260720'
+    'host': os.getenv('CLICKHOUSE_SOURCE_HOST', 'your_host'),
+    'password': os.getenv('CLICKHOUSE_SOURCE_PASSWORD', 'your_password'),
+    'user': os.getenv('CLICKHOUSE_SOURCE_USER', 'your_user'),
+    'database': os.getenv('CLICKHOUSE_SOURCE_DB', 'your_database')
 }
 
 # ---------- Настройки ----------
