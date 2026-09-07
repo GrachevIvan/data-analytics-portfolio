@@ -12,17 +12,17 @@ import matplotlib.dates as mdates
 # Импорт io для работы с байтовым потоком (сохраняем график в переменную)
 import io
 
+# Telegram токен и ID чата удалены в соответствии с условиями использования учебных материалов.
 # ===== Блок Telegram (закомментирован, так как Telegram недоступен) =====
 # import telegram
-# TOKEN = '8818975193:AAGK8xef2hDSL2kVWoTnfDO7pDnU4smKSe4'
-# CHAT_ID = -1002614297220
+# TOKEN = ''
+# CHAT_ID = ''
 
-# ---------- Подключение к ClickHouse (источник данных) ----------
 SOURCE_CONN = {
-    'host': 'http://clickhouse.lab.karpov.courses:8123',
-    'password': 'dpo_python_2020',
-    'user': 'student',
-    'database': 'simulator_20260720'
+    'host': os.getenv('CLICKHOUSE_SOURCE_HOST', 'your_host'),
+    'password': os.getenv('CLICKHOUSE_SOURCE_PASSWORD', 'your_password'),
+    'user': os.getenv('CLICKHOUSE_SOURCE_USER', 'your_user'),
+    'database': os.getenv('CLICKHOUSE_SOURCE_DB', 'your_database')
 }
 
 # ---------- Аргументы по умолчанию для DAG ----------
