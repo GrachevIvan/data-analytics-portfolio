@@ -107,3 +107,7 @@ Python (pandas, numpy, matplotlib), Orbit (модель LGT), ClickHouse.
 Apache Superset, ClickHouse.
 
 ---
+
+**Учебный проект**  
+Выполнен в рамках курса [Karpov.Courses](https://karpov.courses/).  
+Все права на формулировки задач принадлежат ООО "Карпов Курсы".
